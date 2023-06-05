@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Scripts to create components
+Creating Modules
+```shell
+ng g m auth --routing
+ng g m heroes --routing
+ng g m material
+ng g m shared
+```
+Creating components
+```shell
+ng g c auth/pages/layaut-page --inline-style --skip-tests
+ng g c auth/pages/login-page --inline-style --skip-tests
+ng g c auth/pages/register-page --inline-style --skip-tests
+ng g c heroes/pages/heroePage --inline-style --skip-tests
+ng g c heroes/pages/layoutPage --inline-style --skip-tests
+ng g c heroes/pages/listPage --inline-style --skip-tests
+ng g c heroes/pages/newPage --inline-style --skip-tests
+ng g c heroes/pages/searchPage --inline-style --skip-tests
+ng g c shared/pages/Error404Page --inline-style --skip-tests
+```
