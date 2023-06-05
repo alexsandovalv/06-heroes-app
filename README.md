@@ -37,7 +37,7 @@ ng g m shared
 ```
 Creating components
 ```shell
-ng g c auth/pages/layaut-page --inline-style --skip-tests
+ng g c auth/pages/layout-page --inline-style --skip-tests
 ng g c auth/pages/login-page --inline-style --skip-tests
 ng g c auth/pages/register-page --inline-style --skip-tests
 ng g c heroes/pages/heroePage --inline-style --skip-tests
