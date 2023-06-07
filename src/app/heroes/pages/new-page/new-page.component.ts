@@ -1,9 +1,9 @@
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { ActivatedRoute, Router } from "@angular/router";
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from "@angular/forms";
-import { filter, switchMap, tap } from "rxjs";
+import { filter, switchMap } from "rxjs";
 import { ConfirmDialogComponent } from "../../components/confirm-dialog/confirm-dialog.component";
 
 import { Hero, Publisher } from "../../interfaces/hero.interface";
@@ -42,9 +42,7 @@ export class NewPageComponent implements OnInit{
   }
 
   get currentHero(): Hero {
-    const hero = this.heroForm.value as Hero;
-
-    return hero;
+    return this.heroForm.value as Hero;
   }
 
   onSubmit():void {
@@ -95,7 +93,7 @@ export class NewPageComponent implements OnInit{
                switchMap( () => this.heroService.deleteHeroById( this.currentHero.id ) ),
                filter( (wasDeleted) => wasDeleted )
              )
-             .subscribe( result => {
+             .subscribe( () => {
                this.router.navigate(['/heroes']);
         });
 
